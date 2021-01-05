@@ -15,6 +15,7 @@ namespace Project
         }
 
         private string _Username;
+        private Account acc;
 
         public string Username
         {
