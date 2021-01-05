@@ -51,6 +51,14 @@ namespace Project
         private string publisher;
         private int year;
         private ArrayList chapter = new ArrayList();
+
+        public Book(string isbn, string title, string author, string publisher)
+        {
+            this.isbn = isbn;
+            this.title = title;
+            this.author = author;
+            this.publisher = publisher;
+        }
         #endregion
         #region Thực thi giao diện IBook
         public string this[int index]
