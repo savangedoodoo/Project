@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Project
 {
@@ -11,7 +12,11 @@ namespace Project
     {
         private Database()
         {
-
+            // Khởi tạo 3 bảng (tùy m sửa )
+            XmlTextReader textReader1 = new XmlTextReader("C:\\users.xml");
+            XmlTextReader textReader2 = new XmlTextReader("C:\\books.xml");
+            XmlTextReader textReader3 = new XmlTextReader("C:\\abooks.xml");
+            XmlTextReader textReader4 = new XmlTextReader("C:\\abooks.xml");
         }
         private static Database _db;
         public static Database GetDatabase()
