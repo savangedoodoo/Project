@@ -27,9 +27,21 @@ namespace Project
         {
             InitializeComponent();
         }
-
+        Database database = Database.GetDatabase();
         private void register(object sender, EventArgs e)
         {
+            string Check = "";
+            if(database.CheckAccount(Account.Text)) Check+="Account đã tồn tại!\n";
+            if (!User.CheckPassword(Password.Text)) Check += "Password phải có ít nhất 8 kí tự, có số và có kí tự viết hoa!\n";
+            if (!User.CheckDateofBirth(DateofBirth.Value)) Check += "Không có sinh viên nào sinh sau 2003,làm ơn nhập lại!\n";
+            if (!User.CheckPhoneNumber(PhoneNum.Text)) Check += "Số điện thoại không phù hợp!\n";
+            if(Check!="")
+            {
+                MessageBox.Show(Check);
+                return;
+            }
+            database.users.Add(new User(Account.Text, Password.Text));
+            this.Close();
             // Lưu các thông tin vào xml file 
         }
 

@@ -8,3 +8,14 @@ C:\Users\ASUS\source\repos\Project\Project\obj\Debug\Project.exe
 C:\Users\ASUS\source\repos\Project\Project\obj\Debug\Project.pdb
 C:\Users\ASUS\source\repos\Project\Project\obj\Debug\Project.LoginForm.resources
 C:\Users\ASUS\source\repos\Project\Project\obj\Debug\Project.RegisterForm.resources
+C:\Users\Dell Precision\source\repos\savangedoodoo\Project\Project\bin\Debug\Project.exe.config
+C:\Users\Dell Precision\source\repos\savangedoodoo\Project\Project\bin\Debug\Project.exe
+C:\Users\Dell Precision\source\repos\savangedoodoo\Project\Project\bin\Debug\Project.pdb
+C:\Users\Dell Precision\source\repos\savangedoodoo\Project\Project\obj\Debug\Project.csprojAssemblyReference.cache
+C:\Users\Dell Precision\source\repos\savangedoodoo\Project\Project\obj\Debug\Project.LoginForm.resources
+C:\Users\Dell Precision\source\repos\savangedoodoo\Project\Project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\Dell Precision\source\repos\savangedoodoo\Project\Project\obj\Debug\Project.RegisterForm.resources
+C:\Users\Dell Precision\source\repos\savangedoodoo\Project\Project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\Dell Precision\source\repos\savangedoodoo\Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\Dell Precision\source\repos\savangedoodoo\Project\Project\obj\Debug\Project.exe
+C:\Users\Dell Precision\source\repos\savangedoodoo\Project\Project\obj\Debug\Project.pdb

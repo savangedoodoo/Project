@@ -41,10 +41,10 @@
             this.HoVaTen = new System.Windows.Forms.TextBox();
             this.Account = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.TextBox();
-            this.NgaySinh = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.PhoneNum = new System.Windows.Forms.TextBox();
             this.department_txt = new System.Windows.Forms.TextBox();
+            this.DateofBirth = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -168,13 +168,6 @@
             this.Password.Size = new System.Drawing.Size(264, 22);
             this.Password.TabIndex = 12;
             // 
-            // NgaySinh
-            // 
-            this.NgaySinh.Location = new System.Drawing.Point(252, 224);
-            this.NgaySinh.Name = "NgaySinh";
-            this.NgaySinh.Size = new System.Drawing.Size(264, 22);
-            this.NgaySinh.TabIndex = 13;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(305, 400);
@@ -199,15 +192,22 @@
             this.department_txt.Size = new System.Drawing.Size(264, 22);
             this.department_txt.TabIndex = 16;
             // 
+            // DateofBirth
+            // 
+            this.DateofBirth.Location = new System.Drawing.Point(252, 224);
+            this.DateofBirth.Name = "DateofBirth";
+            this.DateofBirth.Size = new System.Drawing.Size(264, 22);
+            this.DateofBirth.TabIndex = 17;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(647, 450);
+            this.Controls.Add(this.DateofBirth);
             this.Controls.Add(this.department_txt);
             this.Controls.Add(this.PhoneNum);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.NgaySinh);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.Account);
             this.Controls.Add(this.HoVaTen);
@@ -244,9 +244,9 @@
         private System.Windows.Forms.TextBox HoVaTen;
         private System.Windows.Forms.TextBox Account;
         private System.Windows.Forms.TextBox Password;
-        private System.Windows.Forms.TextBox NgaySinh;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox PhoneNum;
         private System.Windows.Forms.TextBox department_txt;
+        private System.Windows.Forms.DateTimePicker DateofBirth;
     }
 }

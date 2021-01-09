@@ -18,11 +18,12 @@ namespace Project
         {
             InitializeComponent();
         }
-       
+        Database database = Database.GetDatabase();
         private void login(object sender, EventArgs e)
         {
             string username = UserID.Text;
             string password = Password.Text;
+            if(database.users.Any(item => item.Username == username || item.Password == password)) MessageBox.Show("Test OK!");
         }
         public static bool IsValidLogin(string user, string password)
         {
@@ -33,7 +34,7 @@ namespace Project
         {
             this.Hide();
             var registerForm = new RegisterForm();
-            registerForm.Closed += (s, args) => this.Close();
+            registerForm.Closed += (s, args) => this.Show();
             registerForm.Show();
         }           
     }
