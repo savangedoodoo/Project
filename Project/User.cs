@@ -7,8 +7,13 @@ using System.Threading.Tasks;
 
 namespace Project
 {
+    [Serializable]
     public class User
     {
+        public User()
+        {
+
+        }
         public User(string Username, string Password)
         {
             this._Username = Username;
@@ -16,8 +21,12 @@ namespace Project
         }
 
         private string _Username;
-        private Account acc=new Account();
-
+        private Account _Acc=new Account();
+        public Account Acc
+        {
+            get { return _Acc; }
+            set { _Acc = value; }
+        }
         public string Username
         {
             get { return _Username; }
@@ -41,7 +50,7 @@ namespace Project
         }
         public static bool CheckDateofBirth(DateTime d)
         {
-            return d.Year > 2003;
+            return d.Year < 2003;
         }
         public static bool CheckPhoneNumber(string phone)
         {

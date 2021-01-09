@@ -23,7 +23,7 @@ namespace Project
         {
             string username = UserID.Text;
             string password = Password.Text;
-            if(database.users.Any(item => item.Username == username || item.Password == password)) MessageBox.Show("Test OK!");
+            if(database.users.Any(item => item.Username == username && item.Password == password)) MessageBox.Show("Test OK!");
         }
         public static bool IsValidLogin(string user, string password)
         {

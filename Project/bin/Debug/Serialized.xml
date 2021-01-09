@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <users>
+    <User>
+      <Acc />
+      <Username>admin</Username>
+      <Password>Admin123</Password>
+    </User>
+  </users>
+</Database>

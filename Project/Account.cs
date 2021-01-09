@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Xml;
 namespace Project
 {
-    class Account
+    public class Account
     {
         public List<int> no_borrowed_books;
         public List<int> no_reserved_books;

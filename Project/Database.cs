@@ -9,29 +9,36 @@ using System.Xml;
 
 namespace Project
 {
+    public class Backing
+    {
+        public Database database()
+        {
+            System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(typeof(Database));
+            // Khởi tạo 3 bảng (tùy m sửa )
+            using (XmlTextReader textReader = new XmlTextReader("Serialized.xml"))
+            {
+                return ((Database)x.Deserialize(textReader));
+            }
+        }
+    }
     public class Database
     {
-        public Database()
-        {
-            // Khởi tạo 3 bảng (tùy m sửa )
-            //XmlTextReader textReader = new XmlTextReader("Serialized.xml");
-            //_db=(Database)x.Deserialize(textReader);
-        }
+        private Database() { }
         public void saveDatabase()
         {
-            /*using (Stream fs = new FileStream("Serialized.xml",
+            System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(typeof(Database));
+            using (Stream fs = new FileStream("Serialized.xml",
                 FileMode.Create, FileAccess.Write, FileShare.None))
             {
                 x.Serialize(fs, _db);
-            }*/
+            }
         }
         private static Database _db;
-        //System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(typeof(Database));
         public static Database GetDatabase()
         {
             if (_db == null)
             {
-                _db = new Database();
+                _db = (new Backing()).database();
             }
             return _db;
         }

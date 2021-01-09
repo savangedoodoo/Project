@@ -41,6 +41,7 @@ namespace Project
                 return;
             }
             database.users.Add(new User(Account.Text, Password.Text));
+            database.saveDatabase();
             this.Close();
             // Lưu các thông tin vào xml file 
         }
