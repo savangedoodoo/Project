@@ -9,18 +9,7 @@ using System.Xml;
 
 namespace Project
 {
-    public class Backing
-    {
-        public Database database()
-        {
-            System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(typeof(Database));
-            // Khởi tạo 3 bảng (tùy m sửa )
-            using (XmlTextReader textReader = new XmlTextReader("Serialized.xml"))
-            {
-                return ((Database)x.Deserialize(textReader));
-            }
-        }
-    }
+
     public class Database
     {
         private Database() { }
@@ -38,7 +27,13 @@ namespace Project
         {
             if (_db == null)
             {
-                _db = (new Backing()).database();
+                System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(typeof(Database));
+                // Khởi tạo 3 bảng (tùy m sửa )
+                using (XmlTextReader textReader = new XmlTextReader("Serialized.xml"))
+                {
+                   _db=((Database)x.Deserialize(textReader));
+                }
+
             }
             return _db;
         }
