@@ -8,9 +8,9 @@ namespace Project
 {
     public class Account
     {
-        public List<int> no_borrowed_books;
-        public List<int> no_reserved_books;
-        public List<int> no_returned_books;
-        public List<int> no_lost_books;
+        public List<string> no_borrowed_books;
+        public List<string> no_reserved_books;
+        public List<string> no_returned_books;
+        public List<string> no_lost_books;
     }
 }

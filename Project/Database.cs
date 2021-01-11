@@ -39,24 +39,12 @@ namespace Project
         }
 
 
-        private List<Book> list = new List<Book>();
+        public List<ABook> listBook = new List<ABook>();
 
         public List<User> users = new List<User>();
         public bool CheckAccount(string user)
         {
             return users.Any(item => item.Username == user);
-        }
-        public void sortYear()
-        {
-            list.Sort((IComparer<Book>)Book.sortYear());
-        }
-        public void sortauthor()
-        {
-            list.Sort((IComparer<Book>)Book.sortauthor());
-        }
-        public void Sort()
-        {
-            list.Sort();
         }
         // end Book list
     }

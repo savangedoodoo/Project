@@ -19,16 +19,28 @@ namespace Project
             InitializeComponent();
         }
         Database database = Database.GetDatabase();
+        public static User user;
         private void login(object sender, EventArgs e)
         {
             string username = UserID.Text;
             string password = Password.Text;
-            if(database.users.Any(item => item.Username == username && item.Password == password)) MessageBox.Show("Test OK!");
+            if (database.users.Any(item => item.Username == username && item.Password == password))
+            {
+                LoginForm.user = database.users.Find(item => item.Username == username);
+                open_user_activity();
+            }
         }
         public static bool IsValidLogin(string user, string password)
         {
             XDocument doc = XDocument.Load("users.xml");
             return false;
+        }
+        private void open_user_activity()
+        {
+            this.Hide();
+            var user_activity = new UserActivity();
+            user_activity.Closed += (s, args) => this.Show();
+            user_activity.Show();
         }
         private void open_register(object sender, EventArgs e) 
         {

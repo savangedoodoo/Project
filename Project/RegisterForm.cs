@@ -21,8 +21,6 @@ namespace Project
         static string mobile = string.Empty;
         static string position = string.Empty;
         static string department = string.Empty;
-        static XmlNode root;
-        static XmlNode xn; XmlDocument xdoc;
         public RegisterForm()
         {
             InitializeComponent();

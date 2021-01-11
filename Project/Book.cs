@@ -41,7 +41,7 @@ namespace Project
         }
         void Show();
     }
-    class Book : IBook, IComparable
+    public class Book : IBook, IComparable
     {
 
         #region Định nghĩa dữ liệu
@@ -52,6 +52,7 @@ namespace Project
         private int year;
         private ArrayList chapter = new ArrayList();
 
+        public Book() {  }
         public Book(string isbn, string title, string author, string publisher)
         {
             this.isbn = isbn;
@@ -59,6 +60,7 @@ namespace Project
             this.author = author;
             this.publisher = publisher;
         }
+
         #endregion
         #region Thực thi giao diện IBook
         public string this[int index]

@@ -55,11 +55,11 @@
     <Compile Include="Book.cs" />
     <Compile Include="Account.cs" />
     <Compile Include="BookFactory.cs" />
-    <Compile Include="GridViewForm.cs">
+    <Compile Include="UserActivity.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GridViewForm.Designer.cs">
-      <DependentUpon>GridViewForm.cs</DependentUpon>
+    <Compile Include="UserActivity.Designer.cs">
+      <DependentUpon>UserActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="RegisterForm.cs">
       <SubType>Form</SubType>
@@ -83,8 +83,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GridViewForm.resx">
-      <DependentUpon>GridViewForm.cs</DependentUpon>
+    <EmbeddedResource Include="UserActivity.resx">
+      <DependentUpon>UserActivity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -103,6 +103,8 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ABook.datasource" />
+    <None Include="Properties\DataSources\Book.datasource" />
+    <None Include="Properties\DataSources\User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

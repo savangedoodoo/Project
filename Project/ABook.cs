@@ -12,20 +12,21 @@ namespace Project
         medium,
         bad,
     }
-    class ABook
+    public class ABook
     {
         #region Định nghĩa dữ liệu
-        private string BookID;
-        private status Status;
-        private Boolean Availability;
-        private Book BookType;
+        public string BookID;
+        public status Status;
+        public Boolean Availability;
+        public Book BookType;
         #endregion
+        public ABook() { }
         public ABook(string BookID, status Status, Boolean Availability, Book BookType)
         {
             this.BookID = BookID;
             this.Status = Status;
             this.Availability = Availability;
-            this.BookType = BookType;
+            this.BookType = BookFactory.getBookType(BookType.ISBN, BookType.Title, BookType.Author, BookType.Publisher);
         }
         #region Định nghĩa các phương thức
         private static void Show_duedt()
