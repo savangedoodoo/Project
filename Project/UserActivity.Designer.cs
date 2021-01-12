@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.aBookBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.aBookBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.aBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Show_borrowing_books = new System.Windows.Forms.Button();
@@ -49,9 +48,6 @@
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Availability = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aBookBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
-            this.bookBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.aBookBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBookBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBookBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBookBindingSource2)).BeginInit();
@@ -61,13 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aBookBindingSource5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // aBookBindingSource3
-            // 
-            this.aBookBindingSource3.DataSource = typeof(Project.ABook);
             // 
             // aBookBindingSource1
             // 
@@ -139,7 +129,6 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Title,
@@ -148,7 +137,6 @@
             this.Status,
             this.Availability,
             this.BookID});
-            this.dataGridView1.DataSource = this.aBookBindingSource5;
             this.dataGridView1.Location = new System.Drawing.Point(93, 149);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -204,14 +192,6 @@
             this.BookID.ReadOnly = true;
             this.BookID.Width = 125;
             // 
-            // aBookBindingSource5
-            // 
-            this.aBookBindingSource5.DataSource = typeof(Project.ABook);
-            // 
-            // bookBindingSource3
-            // 
-            this.bookBindingSource3.DataSource = typeof(Project.Book);
-            // 
             // UserActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -224,7 +204,6 @@
             this.Controls.Add(this.Show_borrowing_books);
             this.Name = "UserActivity";
             this.Text = "GridViewForm";
-            ((System.ComponentModel.ISupportInitialize)(this.aBookBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBookBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBookBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBookBindingSource2)).EndInit();
@@ -234,8 +213,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aBookBindingSource5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,15 +226,12 @@
         private System.Windows.Forms.Button Search_book;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.BindingSource aBookBindingSource2;
-        private System.Windows.Forms.BindingSource aBookBindingSource3;
         private System.Windows.Forms.BindingSource aBookBindingSource4;
         private System.Windows.Forms.BindingSource userBindingSource;
         private System.Windows.Forms.BindingSource bookBindingSource;
         private System.Windows.Forms.BindingSource bookBindingSource1;
         private System.Windows.Forms.BindingSource bookBindingSource2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource aBookBindingSource5;
-        private System.Windows.Forms.BindingSource bookBindingSource3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn Author;
         private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;

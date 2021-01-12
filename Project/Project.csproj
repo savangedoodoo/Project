@@ -55,6 +55,7 @@
     <Compile Include="Book.cs" />
     <Compile Include="Account.cs" />
     <Compile Include="BookFactory.cs" />
+    <Compile Include="Librarian.cs" />
     <Compile Include="UserActivity.cs">
       <SubType>Form</SubType>
     </Compile>

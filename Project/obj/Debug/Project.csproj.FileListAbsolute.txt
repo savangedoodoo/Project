@@ -20,3 +20,4 @@ C:\Users\Dell Precision\source\repos\savangedoodoo\Project\Project\obj\Debug\Pro
 C:\Users\Dell Precision\source\repos\savangedoodoo\Project\Project\obj\Debug\Project.exe
 C:\Users\Dell Precision\source\repos\savangedoodoo\Project\Project\obj\Debug\Project.pdb
 C:\Users\ASUS\source\repos\Project\Project\obj\Debug\Project.UserActivity.resources
+C:\Users\Dell Precision\Source\Repos\savangedoodoo\Project\Project\obj\Debug\Project.UserActivity.resources

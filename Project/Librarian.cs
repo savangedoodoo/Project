@@ -8,7 +8,7 @@ namespace Project
 {
     public class Librarian
     {
-        public string name ;
+        public string name;
         public string Street;
         public string City;
         public string State;
@@ -27,9 +27,13 @@ namespace Project
             database.listBook.Add(book);
         }
 
-        public void remove_abook(string BookID, status Status, Boolean Availability, Book BookType)
+        public void remove_abook(string BookID)
         {
-
+            if(database.listBook.Any(item =>item.BookID==BookID))
+            {
+                //Dùng cách này mới trỏ tới đúng phần tử cần remove
+                database.listBook.Remove(database.listBook.Find(item => item.BookID == BookID));
+            }
         }
 
 

@@ -12,11 +12,20 @@ namespace Project
 
         public static Book getBookType(string isbn, string title, string author, string publisher)
         {
-            Book result = bookTypes[title];
+            Book result = bookTypes[isbn];
             if (result == null)
             {
                 result = new Book(isbn, title, author, publisher);
-                bookTypes[title] = result;
+                bookTypes[isbn] = result;
+            }
+            return result;
+        }
+        public static Book getBookType(Book book)
+        {
+            Book result = bookTypes[book.ISBN];
+            if (result == null)
+            {
+                result = book;
             }
             return result;
         }
