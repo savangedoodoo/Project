@@ -38,7 +38,7 @@ namespace Project
                 MessageBox.Show(Check);
                 return;
             }
-            database.users.Add(new User(HoVaTen.Text, IDname.Text));
+            database.users.Add(new User(HoVaTen.Text, IDname.Text,Email.Text,DateofBirth.Value,PhoneNum.Text));
             database.saveDatabase();
             this.Close();
             // Lưu các thông tin vào xml file 

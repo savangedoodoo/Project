@@ -14,13 +14,20 @@ namespace Project
         {
 
         }
-        public User(string Username, string ID)
+        public User(string Username, string ID,string Email,DateTime DateofBirth,string PhoneNum)
         {
             this._Username = Username;
             this._ID = ID;
+            this._Email = Email;
+            this._DateofBirth = DateofBirth;
+            this._PhoneNum = PhoneNum;
         }
 
         private string _Username;
+        private string _ID;
+        private string _Email;
+        private DateTime _DateofBirth;
+        private string _PhoneNum;
         private Account _Acc=new Account();
         public Account Acc
         {
@@ -33,12 +40,25 @@ namespace Project
             set { _Username = value; }
         }
 
-        private string _ID;
-
         public string ID
         {
             get { return _ID; }
             set { _ID = value; }
+        }
+        public string Email
+        {
+            get { return _Email; }
+            set { _Email = value; }
+        }
+        public DateTime DateofBirth
+        {
+            get { return _DateofBirth; }
+            set { _DateofBirth = value; }
+        }
+        public string PhoneNum
+        {
+            get { return _PhoneNum; }
+            set { _PhoneNum = value; }
         }
         public static bool CheckPassword(string input)
         {
