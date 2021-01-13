@@ -12,22 +12,22 @@ namespace Project
 
         public static Book getBookType(string isbn, string title, string author, string publisher)
         {
-            Book result = bookTypes[isbn];
-            if (result == null)
+            if (bookTypes.ContainsKey(isbn)) return bookTypes[isbn];
+            else
             {
-                result = new Book(isbn, title, author, publisher);
-                bookTypes[isbn] = result;
+                Book result = new Book(isbn, title, author, publisher);
+                bookTypes.Add(isbn,result);
+                return result;
             }
-            return result;
         }
         public static Book getBookType(Book book)
         {
-            Book result = bookTypes[book.ISBN];
-            if (result == null)
+            if (bookTypes.ContainsKey(book.ISBN)) return bookTypes[book.ISBN];
+            else
             {
-                result = book;
+                bookTypes.Add(book.ISBN, book);
+                return book;
             }
-            return result;
         }
     }
 }

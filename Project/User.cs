@@ -14,10 +14,10 @@ namespace Project
         {
 
         }
-        public User(string Username, string Password)
+        public User(string Username, string ID)
         {
             this._Username = Username;
-            this._Password = Password;
+            this._ID = ID;
         }
 
         private string _Username;
@@ -33,12 +33,12 @@ namespace Project
             set { _Username = value; }
         }
 
-        private string _Password;
+        private string _ID;
 
-        public string Password
+        public string ID
         {
-            get { return _Password; }
-            set { _Password = value; }
+            get { return _ID; }
+            set { _ID = value; }
         }
         public static bool CheckPassword(string input)
         {

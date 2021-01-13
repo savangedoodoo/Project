@@ -14,7 +14,7 @@ namespace Project
     public partial class UserActivity : Form
     {
 
-        
+        User user;
         public UserActivity()
         {
             InitializeComponent();
@@ -24,8 +24,58 @@ namespace Project
 
         private void Show_borrowing_books_Click(object sender, EventArgs e)
         {
-            List<ABook> list_borrowed_books = database.listBook.FindAll(item => LoginForm.user.Acc.no_borrowed_books.Contains(item.BookID));
-            foreach (ABook book in list_borrowed_books)
+            List<ABook> list_borrowed_books = database.listBook.FindAll(item => user.Acc.no_borrowed_books.Contains(item.BookID));
+            Get_list_of_Books(list_borrowed_books);
+        }
+
+        private void Search_book_Click(object sender, EventArgs e)
+        {
+            List<ABook> list_search_books = database.listBook.FindAll(item => item.BookType.Title.Contains(search_text.Text));
+            Get_list_of_Books(list_search_books);
+        }
+
+        private void Check_Click(object sender, EventArgs e)
+        {
+            if(database.users.Any(item=>item.ID==ID.Text))
+            {
+                Show_borrowing_books.Enabled = true;
+                Borrow_book.Enabled = true;
+                return_Book.Enabled = true;
+                Show_returned_books.Enabled = true;
+                user = database.users.Find(item => item.ID == ID.Text);
+            }    
+        }
+
+        private void Borrow_book_Click(object sender, EventArgs e)
+        {
+            if(database.listBook.Any(item=>item.BookID==Borrow_Book_ID.Text&&item.Availability==true))
+            {
+                //Kiểm tra xem sách đã được mượn chưa rồi gán 
+                if(!user.Acc.no_borrowed_books.Contains(Borrow_Book_ID.Text)) user.Acc.no_borrowed_books.Add(Borrow_Book_ID.Text);
+                database.listBook.Find(item => item.BookID == Borrow_Book_ID.Text).Availability = false;
+            }    
+        }
+
+        private void return_Book_Click(object sender, EventArgs e)
+        {
+            if(user.Acc.no_borrowed_books.Contains(return_Book_ID.Text))
+            {
+                user.Acc.no_borrowed_books.Remove(return_Book_ID.Text);
+                user.Acc.no_returned_books.Add(return_Book_ID.Text);
+                database.listBook.Find(item => item.BookID == return_Book_ID.Text).Availability = true;
+            }    
+        }
+
+        private void Show_returned_books_Click(object sender, EventArgs e)
+        {
+            List<ABook> list_returned_books = database.listBook.FindAll(item => user.Acc.no_returned_books.Contains(item.BookID));
+            Get_list_of_Books(list_returned_books);
+        }
+
+        private void Get_list_of_Books(List<ABook> list_of_books)
+        {
+            dataGridView1.Rows.Clear();
+            foreach (ABook book in list_of_books)
             {
                 DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
                 row.Cells[0].Value = book.BookType.Title;

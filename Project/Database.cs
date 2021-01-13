@@ -42,6 +42,8 @@ namespace Project
         public List<ABook> listBook = new List<ABook>();
 
         public List<User> users = new List<User>();
+
+        public List<Librarian> librarians = new List<Librarian>();
         public bool CheckAccount(string user)
         {
             return users.Any(item => item.Username == user);

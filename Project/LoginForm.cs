@@ -19,15 +19,15 @@ namespace Project
             InitializeComponent();
         }
         Database database = Database.GetDatabase();
-        public static User user;
+        public static Librarian user;
         private void login(object sender, EventArgs e)
         {
             string username = UserID.Text;
             string password = Password.Text;
-            if (database.users.Any(item => item.Username == username && item.Password == password))
+            if (database.librarians.Any(item => item.Account == username && item.Password == password))
             {
-                LoginForm.user = database.users.Find(item => item.Username == username);
-                open_user_activity();
+                LoginForm.user = database.librarians.Find(item => item.Account == username);
+                open_start_page();
             }
         }
         public static bool IsValidLogin(string user, string password)
@@ -35,17 +35,17 @@ namespace Project
             XDocument doc = XDocument.Load("users.xml");
             return false;
         }
-        private void open_user_activity()
+        private void open_start_page()
         {
             this.Hide();
-            var user_activity = new UserActivity();
-            user_activity.Closed += (s, args) => this.Show();
-            user_activity.Show();
+            var start_page = new StartPage();
+            start_page.Closed += (s, args) => this.Show();
+            start_page.Show();
         }
         private void open_register(object sender, EventArgs e) 
         {
             this.Hide();
-            var registerForm = new RegisterForm();
+            var registerForm = new AdmRegister();
             registerForm.Closed += (s, args) => this.Show();
             registerForm.Show();
         }           

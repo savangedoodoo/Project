@@ -1,10 +1,161 @@
 <?xml version="1.0"?>
 <Database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <listBook>
+    <ABook>
+      <BookID>MI00001</BookID>
+      <Status>good</Status>
+      <Availability>true</Availability>
+      <BookType>
+        <Title>Giáo trình giải tích 1</Title>
+        <Publisher>Bách Khoa</Publisher>
+        <Author>Tô Văn Ban</Author>
+        <ISBN>9786040037961</ISBN>
+        <Year>0</Year>
+      </BookType>
+    </ABook>
+    <ABook>
+      <BookID>MI00002</BookID>
+      <Status>good</Status>
+      <Availability>true</Availability>
+      <BookType>
+        <Title>Giáo trình giải tích 1</Title>
+        <Publisher>Bách Khoa</Publisher>
+        <Author>Tô Văn Ban</Author>
+        <ISBN>9786040037961</ISBN>
+        <Year>0</Year>
+      </BookType>
+    </ABook>
+    <ABook>
+      <BookID>MI00003</BookID>
+      <Status>good</Status>
+      <Availability>true</Availability>
+      <BookType>
+        <Title>Giáo trình giải tích 1</Title>
+        <Publisher>Bách Khoa</Publisher>
+        <Author>Tô Văn Ban</Author>
+        <ISBN>9786040037961</ISBN>
+        <Year>0</Year>
+      </BookType>
+    </ABook>
+    <ABook>
+      <BookID>MI00004</BookID>
+      <Status>good</Status>
+      <Availability>true</Availability>
+      <BookType>
+        <Title>Giáo trình giải tích 1</Title>
+        <Publisher>Bách Khoa</Publisher>
+        <Author>Tô Văn Ban</Author>
+        <ISBN>9786040037961</ISBN>
+        <Year>0</Year>
+      </BookType>
+    </ABook>
+    <ABook>
+      <BookID>MI00005</BookID>
+      <Status>good</Status>
+      <Availability>true</Availability>
+      <BookType>
+        <Title>Giáo trình giải tích 1</Title>
+        <Publisher>Bách Khoa</Publisher>
+        <Author>Tô Văn Ban</Author>
+        <ISBN>9786040037961</ISBN>
+        <Year>0</Year>
+      </BookType>
+    </ABook>
+    <ABook>
+      <BookID>MI00005</BookID>
+      <Status>good</Status>
+      <Availability>true</Availability>
+      <BookType>
+        <Title>Giáo trình giải tích 1</Title>
+        <Publisher>Bách Khoa</Publisher>
+        <Author>Tô Văn Ban</Author>
+        <ISBN>9786040037961</ISBN>
+        <Year>0</Year>
+      </BookType>
+    </ABook>
+    <ABook>
+      <BookID>MP00001</BookID>
+      <Status>good</Status>
+      <Availability>false</Availability>
+      <BookType>
+        <Title>21 Lessons for the 21st Century</Title>
+        <Publisher>Spiegel &amp; Grau</Publisher>
+        <Author>Yuval Noah Harari</Author>
+        <ISBN>9781984801494</ISBN>
+        <Year>0</Year>
+      </BookType>
+    </ABook>
+    <ABook>
+      <BookID>MP00002</BookID>
+      <Status>good</Status>
+      <Availability>true</Availability>
+      <BookType>
+        <Title>21 Lessons for the 21st Century</Title>
+        <Publisher>Spiegel &amp; Grau</Publisher>
+        <Author>Yuval Noah Harari</Author>
+        <ISBN>9781984801494</ISBN>
+        <Year>0</Year>
+      </BookType>
+    </ABook>
+    <ABook>
+      <BookID>MP00003</BookID>
+      <Status>good</Status>
+      <Availability>true</Availability>
+      <BookType>
+        <Title>21 Lessons for the 21st Century</Title>
+        <Publisher>Spiegel &amp; Grau</Publisher>
+        <Author>Yuval Noah Harari</Author>
+        <ISBN>9781984801494</ISBN>
+        <Year>0</Year>
+      </BookType>
+    </ABook>
+    <ABook>
+      <BookID>MP00004</BookID>
+      <Status>good</Status>
+      <Availability>true</Availability>
+      <BookType>
+        <Title>21 Lessons for the 21st Century</Title>
+        <Publisher>Spiegel &amp; Grau</Publisher>
+        <Author>Yuval Noah Harari</Author>
+        <ISBN>9781984801494</ISBN>
+        <Year>0</Year>
+      </BookType>
+    </ABook>
+    <ABook>
+      <BookID>MP00005</BookID>
+      <Status>good</Status>
+      <Availability>true</Availability>
+      <BookType>
+        <Title>21 Lessons for the 21st Century</Title>
+        <Publisher>Spiegel &amp; Grau</Publisher>
+        <Author>Yuval Noah Harari</Author>
+        <ISBN>9781984801494</ISBN>
+        <Year>0</Year>
+      </BookType>
+    </ABook>
+  </listBook>
   <users>
     <User>
-      <Acc />
-      <Username>admin</Username>
-      <Password>Admin123</Password>
+      <Acc>
+        <no_borrowed_books>
+          <string>MP00001</string>
+        </no_borrowed_books>
+        <no_reserved_books />
+        <no_returned_books />
+        <no_lost_books />
+      </Acc>
+      <Username>Đỗ Ngọc Hưng</Username>
+      <ID>20183755</ID>
     </User>
   </users>
+  <librarians>
+    <Librarian>
+      <Account>Hungdo</Account>
+      <Password>Hungdo123</Password>
+      <Name>Do Ngoc Hung</Name>
+      <Home_Address>Bac Giang</Home_Address>
+      <Email_Address>ilovemufffin008@gmail.com</Email_Address>
+      <Phone_number>0963926614</Phone_number>
+    </Librarian>
+  </librarians>
 </Database>

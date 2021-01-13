@@ -194,6 +194,7 @@
             this.Add_btn.TabIndex = 16;
             this.Add_btn.Text = "Thêm";
             this.Add_btn.UseVisualStyleBackColor = true;
+            this.Add_btn.Click += new System.EventHandler(this.Add_btn_Click);
             // 
             // Exit_btn
             // 
@@ -203,6 +204,7 @@
             this.Exit_btn.TabIndex = 17;
             this.Exit_btn.Text = "Thoát";
             this.Exit_btn.UseVisualStyleBackColor = true;
+            this.Exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
             // AddBook
             // 
@@ -231,7 +233,6 @@
             this.Text = "AddBook";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

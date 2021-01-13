@@ -22,6 +22,7 @@ namespace Project
         public Boolean Availability;
         public Book BookType;
         #endregion
+        public ABook() { }
         public ABook(string BookID, status Status, Boolean Availability, Book BookType)
         {
             this.BookID = BookID;

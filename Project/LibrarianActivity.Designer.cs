@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.Addbook = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -42,14 +42,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // Addbook
             // 
-            this.button1.Location = new System.Drawing.Point(114, 143);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 48);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Thêm sách";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Addbook.Location = new System.Drawing.Point(114, 143);
+            this.Addbook.Name = "Addbook";
+            this.Addbook.Size = new System.Drawing.Size(89, 48);
+            this.Addbook.TabIndex = 0;
+            this.Addbook.Text = "Thêm sách";
+            this.Addbook.UseVisualStyleBackColor = true;
+            this.Addbook.Click += new System.EventHandler(this.Addbook_Click);
             // 
             // button2
             // 
@@ -149,7 +150,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Addbook);
             this.Name = "LibrarianActivity";
             this.Text = "LibrarianActivity";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -159,7 +160,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Addbook;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.DataGridView dataGridView1;

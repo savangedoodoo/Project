@@ -16,7 +16,14 @@ namespace Project
         {
             InitializeComponent();
         }
-
-
+        Database database = Database.GetDatabase();
+        private void Addbook_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var addBook= new AddBook();
+            addBook.Closed += (s, args) => this.Show();
+            addBook.Closed += (s, args) => database.saveDatabase();
+            addBook.Show();
+        }
     }
 }

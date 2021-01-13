@@ -21,3 +21,10 @@ C:\Users\Dell Precision\source\repos\savangedoodoo\Project\Project\obj\Debug\Pro
 C:\Users\Dell Precision\source\repos\savangedoodoo\Project\Project\obj\Debug\Project.pdb
 C:\Users\ASUS\source\repos\Project\Project\obj\Debug\Project.UserActivity.resources
 C:\Users\Dell Precision\Source\Repos\savangedoodoo\Project\Project\obj\Debug\Project.UserActivity.resources
+C:\Users\Dell Precision\Source\Repos\savangedoodoo\Project\Project\obj\Debug\Project.AddBook.resources
+C:\Users\Dell Precision\Source\Repos\savangedoodoo\Project\Project\obj\Debug\Project.LibrarianActivity.resources
+C:\Users\Dell Precision\Source\Repos\savangedoodoo\Project\Project\obj\Debug\Project.AdmRegister.resources
+C:\Users\Dell Precision\Source\Repos\savangedoodoo\Project\Project\obj\Debug\Project.StartPage.resources
+C:\Users\Dell Precision\Source\Repos\savangedoodoo\Project\Project\obj\Debug\Project.Form2.resources
+C:\Users\Dell Precision\Source\Repos\savangedoodoo\Project\Project\obj\Debug\Project.UserManegement.resources
+C:\Users\Dell Precision\Source\Repos\savangedoodoo\Project\Project\obj\Debug\Project.ChangePassword.resources
