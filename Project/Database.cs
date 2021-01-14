@@ -24,10 +24,10 @@ namespace Project
             {
                 this.users = ((List<User>)x2.Deserialize(textReader));
             }
-            System.Xml.Serialization.XmlSerializer x3 = new System.Xml.Serialization.XmlSerializer(typeof(List<Librarian>));
+            System.Xml.Serialization.XmlSerializer x3 = new System.Xml.Serialization.XmlSerializer(typeof(List<CLibrarian_001>));
             using (XmlTextReader textReader = new XmlTextReader("Librarians.xml"))
             {
-                this.librarians = ((List<Librarian>)x3.Deserialize(textReader));
+                this.librarians = ((List<CLibrarian_001>)x3.Deserialize(textReader));
             }
         }
 
@@ -36,7 +36,7 @@ namespace Project
 
         public List<User> users = new List<User>();
 
-        public List<Librarian> librarians = new List<Librarian>();
+        public List<CLibrarian_001> librarians = new List<CLibrarian_001>();
         #endregion
         private static Database _db;
         public static Database GetDatabase()
@@ -61,7 +61,7 @@ namespace Project
             {
                 x2.Serialize(fs, _db.users);
             }
-            System.Xml.Serialization.XmlSerializer x3 = new System.Xml.Serialization.XmlSerializer(typeof(List<Librarian>));
+            System.Xml.Serialization.XmlSerializer x3 = new System.Xml.Serialization.XmlSerializer(typeof(List<CLibrarian_001>));
             using (Stream fs = new FileStream("Librarians.xml",
                 FileMode.Create, FileAccess.Write, FileShare.None))
             {
