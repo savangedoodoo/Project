@@ -34,6 +34,10 @@ namespace Project
                 BookType = BookFactory.getBookType(Search_ISBN.Text);
                 Delete.Enabled = true;
                 Update.Enabled = true;
+                Title.Text = BookType.Title;
+                Author.Text = BookType.Author;
+                Publisher.Text = BookType.Publisher;
+                Year.Text = Convert.ToString(BookType.Year);
             }
         }
 
@@ -42,7 +46,7 @@ namespace Project
             try
             {
                 BookType.Title = Title.Text;
-                BookType.Author = Title.Text;
+                BookType.Author = Author.Text;
                 BookType.Publisher = Publisher.Text;
                 BookType.Year = Convert.ToInt32(Year.Text);
             }
@@ -66,11 +70,13 @@ namespace Project
         {
             try
             {
-                database.listBook.RemoveAll(item => item.BookID == Delete_Book.Text);
+                int a=database.listBook.RemoveAll(item => item.BookID == Delete_Book_ID.Text);
+                if (a == 0) MessageBox.Show("Không có sách cần xóa!");
+                if (a != 0) MessageBox.Show("Đã xóa sách!");
             }
             catch
             {
-                MessageBox.Show("Không có BookID cần xóa!");
+                MessageBox.Show("Không có BookID để xóa!");
             }
         }
     }

@@ -44,7 +44,7 @@
             this.Update = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.Delete_Book = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Delete_Book_ID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Addbook
@@ -189,22 +189,21 @@
             this.Delete_Book.UseVisualStyleBackColor = true;
             this.Delete_Book.Click += new System.EventHandler(this.Delete_Book_Click);
             // 
-            // richTextBox1
+            // Delete_Book_ID
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(172, 393);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(84, 33);
-            this.richTextBox1.TabIndex = 21;
-            this.richTextBox1.Text = "";
+            this.Delete_Book_ID.Location = new System.Drawing.Point(164, 398);
+            this.Delete_Book_ID.Name = "Delete_Book_ID";
+            this.Delete_Book_ID.Size = new System.Drawing.Size(92, 22);
+            this.Delete_Book_ID.TabIndex = 24;
             // 
             // LibrarianActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 447);
+            this.Controls.Add(this.Delete_Book_ID);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Delete_Book);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.Update);
             this.Controls.Add(this.Author);
             this.Controls.Add(this.Publisher);
@@ -244,6 +243,6 @@
         private System.Windows.Forms.Button Update;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Delete_Book;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox Delete_Book_ID;
     }
 }

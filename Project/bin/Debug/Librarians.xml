@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ArrayOfLibrarian xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Librarian>
+    <Username>Đỗ Ngọc Hưng</Username>
+    <ID>LI00001</ID>
+    <Email>ilovemuffin008@gmail.com</Email>
+    <DateofBirth>2000-01-28T00:00:00</DateofBirth>
+    <PhoneNum>0963926614</PhoneNum>
+    <Account>Hungdo</Account>
+    <Password>Hungdo123</Password>
+    <Home_Address>Bac Giang</Home_Address>
+  </Librarian>
+</ArrayOfLibrarian>

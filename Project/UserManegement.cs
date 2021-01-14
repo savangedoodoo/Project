@@ -44,21 +44,40 @@ namespace Project
                 Update.Enabled = true;
                 Delete.Enabled = true;
             }
+            else
+            {
+                MessageBox.Show("Không tìm thấy!");
+                if (user != null) ID.Text = user.ID;
+            }    
         }
 
         private void Update_Click(object sender, EventArgs e)
         {
+            string Check = "";
+            Facade facade = new Facade(Email.Text, PhoneNum.Text, DateofBirth.Value);
+            Check = facade.Check();
+            if(Check!="")
+            {
+                MessageBox.Show(Check);
+                return;
+            }
             savedState = originator.SaveToMemento();
             user.Username = Name.Text;
             user.ID = ID.Text;
             user.Email = Email.Text;
             user.DateofBirth = DateofBirth.Value;
             user.PhoneNum = PhoneNum.Text;
+            Undo.Enabled = false;
         }
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            database.users.Remove(user);
+            DialogResult d = MessageBox.Show("Bạn có thật sự muốn xóa không?", "Confirmation", MessageBoxButtons.YesNoCancel);
+            if (d == DialogResult.Yes)
+            {
+                database.users.Remove(user);
+            }
+            
         }
 
         private void Undo_Click(object sender, EventArgs e)

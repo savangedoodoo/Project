@@ -13,7 +13,7 @@ namespace Project
         medium,
         bad,
     }
-    [Serializable]
+    [Serializable()]
     public class ABook:ISerializable
     {
         #region Định nghĩa dữ liệu
@@ -52,7 +52,7 @@ namespace Project
 
         }
 
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        void ISerializable.GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue("BookID", BookID);
             info.AddValue("Status", Status);

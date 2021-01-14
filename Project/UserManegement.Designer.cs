@@ -221,6 +221,7 @@
             // 
             // Undo
             // 
+            this.Undo.Enabled = false;
             this.Undo.Location = new System.Drawing.Point(420, 330);
             this.Undo.Name = "Undo";
             this.Undo.Size = new System.Drawing.Size(53, 43);
