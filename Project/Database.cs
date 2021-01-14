@@ -19,6 +19,10 @@ namespace Project
             {
                 this.listBook = ((List<ABook>)x1.Deserialize(textReader));
             }
+            foreach(ABook book in listBook)
+            {
+                book.BookType = BookFactory.getBookType(book.BookType);
+            }    
             System.Xml.Serialization.XmlSerializer x2 = new System.Xml.Serialization.XmlSerializer(typeof(List<User>));
             using (XmlTextReader textReader = new XmlTextReader("Users.xml"))
             {

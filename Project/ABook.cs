@@ -17,10 +17,14 @@ namespace Project
     public class ABook:ISerializable
     {
         #region Định nghĩa dữ liệu
-        public string BookID;
-        public status Status;
-        public Boolean Availability;
-        public Book BookType;
+        private string _BookID;
+        private status _Status;
+        private Boolean _Availability;
+        private Book _BookType;
+        public string BookID { get => _BookID; set => _BookID = value; }
+        public status Status { get => _Status; set => _Status = value; }
+        public Boolean Availability { get => _Availability; set => _Availability = value; }
+        public Book BookType { get => _BookType; set => _BookType = value; }
         #endregion
         public ABook() { }
         public ABook(string BookID, status Status, Boolean Availability, Book BookType)
@@ -33,10 +37,17 @@ namespace Project
         public ABook(SerializationInfo info, StreamingContext ctxt)
         {
             //định nghĩa lại phương thức Deserialization
-            BookID = (string)info.GetValue("BookID", typeof(string));
-            Status = (status)info.GetValue("Status", typeof(status));
-            Availability = (bool)info.GetValue("Availability", typeof(bool));
-            BookType = BookFactory.getBookType((Book)info.GetValue("BookType", typeof(Book)));
+            _BookID = (string)info.GetValue("BookID", typeof(string));
+            _Status = (status)info.GetValue("Status", typeof(status));
+            _Availability = (bool)info.GetValue("Availability", typeof(bool));
+            _BookType = BookFactory.getBookType((Book)info.GetValue("BookType", typeof(Book)));
+        }
+        void ISerializable.GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            info.AddValue("BookID", _BookID);
+            info.AddValue("Status", _Status);
+            info.AddValue("Availability", _Availability);
+            info.AddValue("BookType", _BookType);
         }
         #region Định nghĩa các phương thức
         private static void Show_duedt()
@@ -50,14 +61,6 @@ namespace Project
         private static void Book_request()
         {
 
-        }
-
-        void ISerializable.GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            info.AddValue("BookID", BookID);
-            info.AddValue("Status", Status);
-            info.AddValue("Availability", Availability);
-            info.AddValue("BookType", BookType);
         }
         #endregion
     }
