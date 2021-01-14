@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Project
 {
-    public class CLibrarian_001:Person
+    public class CLibrarian_001:CPerson_002
     {
         #region Public interface
         public CLibrarian_001() { }
         public CLibrarian_001(string m_string_account, string Name, string Password, string Home, string Email, string Phone, string ID, DateTime DateofBirth)
         {
-            this.m_str_account = Account;
+            this.m_str_account = m_string_account;
             this.m_str_username = Name;
             this.m_str_password = Password;
             this.m_str_home_address = Home;

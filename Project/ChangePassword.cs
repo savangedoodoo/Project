@@ -20,7 +20,7 @@ namespace Project
         private void OK_Click(object sender, EventArgs e)
         {
             String check = "";
-            if (LoginForm.user.Password != Old_Password.Text) check += "Sai mật khẩu cũ!\n";
+            if (LoginForm.user.m_str_password != Old_Password.Text) check += "Sai mật khẩu cũ!\n";
             if (New_Password.Text != New_Pasword2.Text) check += "Sai mật khẩu nhập lại!";
             if(check!="")
             {
@@ -28,7 +28,7 @@ namespace Project
                 return;
             }
             //Nếu mật khẩu thỏa mãn thì mới đến bước dưới
-            LoginForm.user.Password = New_Password.Text;
+            LoginForm.user.m_str_password = New_Password.Text;
         }
     }
 }

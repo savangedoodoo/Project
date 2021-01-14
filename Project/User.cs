@@ -9,18 +9,18 @@ using System.Text.RegularExpressions;
 namespace Project
 {
     [Serializable]
-    public class User:Person
+    public class User:CPerson_002
     {
         public User()
         {
         }
         public User(string Username, string ID,string Email,DateTime DateofBirth,string PhoneNum)
         {
-            this._Username = Username;
-            this._ID = ID;
-            this._Email = Email;
-            this._DateofBirth = DateofBirth;
-            this._PhoneNum = PhoneNum;
+            this.m_str_username = Username;
+            this.m_str_id = ID;
+            this.m_str_email = Email;
+            this.m_str_date_of_birth = DateofBirth;
+            this.m_str_phone_num = PhoneNum;
         }
         public User Clone()
 

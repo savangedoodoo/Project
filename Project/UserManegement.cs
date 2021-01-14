@@ -35,13 +35,13 @@ namespace Project
             {
                 user = database.users.Find(item => item.ID == Search_ID.Text);
                 originator.Set(user);
-                Name.Text = user.Username;
+                Name_txt.Text = user.Username;
                 ID.Text = user.ID;
                 Search_ID.Text = ID.Text;
                 Email.Text = user.Email;
                 DateofBirth.Value = user.DateofBirth;
                 PhoneNum.Text = user.PhoneNum;
-                Update.Enabled = true;
+                Update_user_info.Enabled = true;
                 Delete.Enabled = true;
             }
             else
@@ -62,7 +62,7 @@ namespace Project
                 return;
             }
             savedState = originator.SaveToMemento();
-            user.Username = Name.Text;
+            user.Username = Name_txt.Text;
             user.ID = ID.Text;
             user.Email = Email.Text;
             user.DateofBirth = DateofBirth.Value;
@@ -83,7 +83,7 @@ namespace Project
         private void Undo_Click(object sender, EventArgs e)
         {
             originator.RestoreFromMemento(savedState);
-            Name.Text = user.Username;
+            Name_txt.Text = user.Username;
             ID.Text = user.ID;
             Search_ID.Text = ID.Text;
             Email.Text = user.Email;

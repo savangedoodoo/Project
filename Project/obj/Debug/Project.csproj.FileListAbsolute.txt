@@ -43,3 +43,6 @@ D:\Project\Project\obj\Debug\Project.UserManegement.resources
 D:\Project\Project\obj\Debug\Project.csproj.GenerateResource.cache
 D:\Project\Project\obj\Debug\Project.exe
 D:\Project\Project\obj\Debug\Project.pdb
+D:\Project\Project\bin\Debug\Project.exe.config
+D:\Project\Project\bin\Debug\Project.exe
+D:\Project\Project\bin\Debug\Project.pdb

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Project
 {
     [Serializable()]
-    public abstract class Person
+    public abstract class CPerson_002
     {
         #region Public interface
         public string Username

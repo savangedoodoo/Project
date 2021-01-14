@@ -33,7 +33,7 @@ namespace Project
             {
                 BookType = BookFactory.getBookType(Search_ISBN.Text);
                 Delete.Enabled = true;
-                Update.Enabled = true;
+                Update_book_info.Enabled = true;
                 Title.Text = BookType.Title;
                 Author.Text = BookType.Author;
                 Publisher.Text = BookType.Publisher;
@@ -63,7 +63,7 @@ namespace Project
             database.listBook.RemoveAll(item => item.BookType.ISBN == BookType.ISBN);
             BookFactory.Remove(BookType.ISBN);
             Delete.Enabled = false;
-            Update.Enabled = false;
+            Update_book_info.Enabled = false;
         }
 
         private void Delete_Book_Click(object sender, EventArgs e)

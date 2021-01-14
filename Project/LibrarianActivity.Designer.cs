@@ -41,7 +41,7 @@
             this.Year = new System.Windows.Forms.TextBox();
             this.Publisher = new System.Windows.Forms.TextBox();
             this.Author = new System.Windows.Forms.TextBox();
-            this.Update = new System.Windows.Forms.Button();
+            this.Update_book_info = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.Delete_Book = new System.Windows.Forms.Button();
             this.Delete_Book_ID = new System.Windows.Forms.TextBox();
@@ -159,16 +159,16 @@
             this.Author.Size = new System.Drawing.Size(222, 22);
             this.Author.TabIndex = 18;
             // 
-            // Update
+            // Update_book_info
             // 
-            this.Update.Enabled = false;
-            this.Update.Location = new System.Drawing.Point(281, 331);
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(113, 43);
-            this.Update.TabIndex = 20;
-            this.Update.Text = "Cập nhật thông tin đầu sách";
-            this.Update.UseVisualStyleBackColor = true;
-            this.Update.Click += new System.EventHandler(this.Update_Click);
+            this.Update_book_info.Enabled = false;
+            this.Update_book_info.Location = new System.Drawing.Point(281, 331);
+            this.Update_book_info.Name = "Update_book_info";
+            this.Update_book_info.Size = new System.Drawing.Size(113, 43);
+            this.Update_book_info.TabIndex = 20;
+            this.Update_book_info.Text = "Cập nhật thông tin đầu sách";
+            this.Update_book_info.UseVisualStyleBackColor = true;
+            this.Update_book_info.Click += new System.EventHandler(this.Update_Click);
             // 
             // label5
             // 
@@ -204,7 +204,7 @@
             this.Controls.Add(this.Delete_Book_ID);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Delete_Book);
-            this.Controls.Add(this.Update);
+            this.Controls.Add(this.Update_book_info);
             this.Controls.Add(this.Author);
             this.Controls.Add(this.Publisher);
             this.Controls.Add(this.Year);
@@ -240,7 +240,7 @@
         private System.Windows.Forms.TextBox Year;
         private System.Windows.Forms.TextBox Publisher;
         private System.Windows.Forms.TextBox Author;
-        private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.Button Update_book_info;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Delete_Book;
         private System.Windows.Forms.TextBox Delete_Book_ID;
