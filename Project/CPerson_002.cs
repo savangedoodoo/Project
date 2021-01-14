@@ -34,7 +34,6 @@ namespace Project
         {
             get { return m_str_phone_num; }
             set { m_str_phone_num = value; }
-
         }
         #endregion
         #region Data Structure
@@ -48,6 +47,5 @@ namespace Project
         #endregion
         #region Private Methods
         #endregion
-
     }
 }

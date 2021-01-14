@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +22,6 @@ namespace Project
             this.m_str_id = ID;
             this.DateofBirth = DateofBirth;
         }
-
         public void check_if_any()
         {
 
@@ -60,6 +59,5 @@ namespace Project
         #endregion
         #region Private Methods
         #endregion
-
     }
 }
