@@ -73,6 +73,7 @@
     <Compile Include="ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facade.cs" />
     <Compile Include="Librarian.cs" />
     <Compile Include="LibrarianActivity.cs">
       <SubType>Form</SubType>
@@ -80,6 +81,8 @@
     <Compile Include="LibrarianActivity.Designer.cs">
       <DependentUpon>LibrarianActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Originator.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="StartPage.cs">
       <SubType>Form</SubType>
     </Compile>

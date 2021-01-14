@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+
 
 namespace Project
 {
     [Serializable]
-    public class User
+    public class User:Person
     {
         public User()
         {
-
         }
         public User(string Username, string ID,string Email,DateTime DateofBirth,string PhoneNum)
         {
@@ -22,43 +22,37 @@ namespace Project
             this._DateofBirth = DateofBirth;
             this._PhoneNum = PhoneNum;
         }
+        public User Clone()
 
-        private string _Username;
-        private string _ID;
-        private string _Email;
-        private DateTime _DateofBirth;
-        private string _PhoneNum;
+        {
+
+            using (MemoryStream stream = new MemoryStream())
+
+            {
+
+                if (this.GetType().IsSerializable)
+
+                {
+
+                    BinaryFormatter formatter = new BinaryFormatter();
+
+                    formatter.Serialize(stream, this);
+
+                    stream.Position = 0;
+
+                    return (User)formatter.Deserialize(stream);
+
+                }
+
+                return null;
+
+            }
+        }
         private Account _Acc=new Account();
         public Account Acc
         {
             get { return _Acc; }
             set { _Acc = value; }
-        }
-        public string Username
-        {
-            get { return _Username; }
-            set { _Username = value; }
-        }
-
-        public string ID
-        {
-            get { return _ID; }
-            set { _ID = value; }
-        }
-        public string Email
-        {
-            get { return _Email; }
-            set { _Email = value; }
-        }
-        public DateTime DateofBirth
-        {
-            get { return _DateofBirth; }
-            set { _DateofBirth = value; }
-        }
-        public string PhoneNum
-        {
-            get { return _PhoneNum; }
-            set { _PhoneNum = value; }
         }
         public static bool CheckPassword(string input)
         {

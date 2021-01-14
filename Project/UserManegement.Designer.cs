@@ -47,6 +47,7 @@
             this.Search_ID = new System.Windows.Forms.TextBox();
             this.Search = new System.Windows.Forms.Button();
             this.DateofBirth = new System.Windows.Forms.DateTimePicker();
+            this.Undo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Add_User
@@ -218,11 +219,22 @@
             this.DateofBirth.Size = new System.Drawing.Size(205, 22);
             this.DateofBirth.TabIndex = 41;
             // 
+            // Undo
+            // 
+            this.Undo.Location = new System.Drawing.Point(420, 330);
+            this.Undo.Name = "Undo";
+            this.Undo.Size = new System.Drawing.Size(53, 43);
+            this.Undo.TabIndex = 42;
+            this.Undo.Text = "Undo";
+            this.Undo.UseVisualStyleBackColor = true;
+            this.Undo.Click += new System.EventHandler(this.Undo_Click);
+            // 
             // UserManegement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 436);
+            this.Controls.Add(this.Undo);
             this.Controls.Add(this.DateofBirth);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.radioButton2);
@@ -269,5 +281,6 @@
         private System.Windows.Forms.TextBox Search_ID;
         private System.Windows.Forms.Button Search;
         private System.Windows.Forms.DateTimePicker DateofBirth;
+        private System.Windows.Forms.Button Undo;
     }
 }

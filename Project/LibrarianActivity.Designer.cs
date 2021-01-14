@@ -29,25 +29,22 @@
         private void InitializeComponent()
         {
             this.Addbook = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Delete = new System.Windows.Forms.Button();
+            this.Search_ISBN = new System.Windows.Forms.RichTextBox();
+            this.Search_Book = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Title = new System.Windows.Forms.TextBox();
+            this.Year = new System.Windows.Forms.TextBox();
+            this.Publisher = new System.Windows.Forms.TextBox();
+            this.Author = new System.Windows.Forms.TextBox();
+            this.Update = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Delete_Book = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // Addbook
@@ -60,40 +57,43 @@
             this.Addbook.UseVisualStyleBackColor = true;
             this.Addbook.Click += new System.EventHandler(this.Addbook_Click);
             // 
-            // button2
+            // Delete
             // 
-            this.button2.Location = new System.Drawing.Point(140, 435);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 43);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Xóa sách";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Delete.Enabled = false;
+            this.Delete.Location = new System.Drawing.Point(95, 331);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(113, 43);
+            this.Delete.TabIndex = 1;
+            this.Delete.Text = "Xóa đầu sách";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
-            // richTextBox1
+            // Search_ISBN
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(172, 62);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(84, 33);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.Search_ISBN.Location = new System.Drawing.Point(172, 62);
+            this.Search_ISBN.Name = "Search_ISBN";
+            this.Search_ISBN.Size = new System.Drawing.Size(84, 33);
+            this.Search_ISBN.TabIndex = 2;
+            this.Search_ISBN.Text = "";
             // 
-            // button1
+            // Search_Book
             // 
-            this.button1.Location = new System.Drawing.Point(281, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 33);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Tìm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Search_Book.Location = new System.Drawing.Point(281, 62);
+            this.Search_Book.Name = "Search_Book";
+            this.Search_Book.Size = new System.Drawing.Size(75, 33);
+            this.Search_Book.TabIndex = 3;
+            this.Search_Book.Text = "Tìm";
+            this.Search_Book.UseVisualStyleBackColor = true;
+            this.Search_Book.Click += new System.EventHandler(this.Search_Book_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(42, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 17);
+            this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Nhập ID Sách";
+            this.label1.Text = "Nhập ISBN";
             // 
             // label2
             // 
@@ -122,124 +122,102 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Publisher";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(64, 347);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 17);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Status";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(63, 310);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 17);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "BookID";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(64, 266);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 17);
+            this.label7.Size = new System.Drawing.Size(38, 17);
             this.label7.TabIndex = 10;
-            this.label7.Text = "ISBN";
+            this.label7.Text = "Year";
             // 
-            // label8
+            // Title
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(63, 390);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 17);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Availability";
+            this.Title.Location = new System.Drawing.Point(172, 126);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(222, 22);
+            this.Title.TabIndex = 12;
             // 
-            // textBox1
+            // Year
             // 
-            this.textBox1.Location = new System.Drawing.Point(172, 126);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 22);
-            this.textBox1.TabIndex = 12;
+            this.Year.Location = new System.Drawing.Point(172, 266);
+            this.Year.Name = "Year";
+            this.Year.Size = new System.Drawing.Size(222, 22);
+            this.Year.TabIndex = 16;
             // 
-            // textBox3
+            // Publisher
             // 
-            this.textBox3.Location = new System.Drawing.Point(172, 347);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(222, 22);
-            this.textBox3.TabIndex = 14;
+            this.Publisher.Location = new System.Drawing.Point(172, 220);
+            this.Publisher.Name = "Publisher";
+            this.Publisher.Size = new System.Drawing.Size(222, 22);
+            this.Publisher.TabIndex = 17;
             // 
-            // textBox4
+            // Author
             // 
-            this.textBox4.Location = new System.Drawing.Point(172, 310);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(222, 22);
-            this.textBox4.TabIndex = 15;
+            this.Author.Location = new System.Drawing.Point(172, 168);
+            this.Author.Name = "Author";
+            this.Author.Size = new System.Drawing.Size(222, 22);
+            this.Author.TabIndex = 18;
             // 
-            // textBox5
+            // Update
             // 
-            this.textBox5.Location = new System.Drawing.Point(172, 266);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(222, 22);
-            this.textBox5.TabIndex = 16;
+            this.Update.Enabled = false;
+            this.Update.Location = new System.Drawing.Point(281, 331);
+            this.Update.Name = "Update";
+            this.Update.Size = new System.Drawing.Size(113, 43);
+            this.Update.TabIndex = 20;
+            this.Update.Text = "Cập nhật thông tin đầu sách";
+            this.Update.UseVisualStyleBackColor = true;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
-            // textBox6
+            // label5
             // 
-            this.textBox6.Location = new System.Drawing.Point(172, 220);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(222, 22);
-            this.textBox6.TabIndex = 17;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(42, 396);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 17);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Nhập BookID";
             // 
-            // textBox7
+            // Delete_Book
             // 
-            this.textBox7.Location = new System.Drawing.Point(172, 168);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(222, 22);
-            this.textBox7.TabIndex = 18;
+            this.Delete_Book.Location = new System.Drawing.Point(281, 393);
+            this.Delete_Book.Name = "Delete_Book";
+            this.Delete_Book.Size = new System.Drawing.Size(75, 33);
+            this.Delete_Book.TabIndex = 22;
+            this.Delete_Book.Text = "Xóa sách";
+            this.Delete_Book.UseVisualStyleBackColor = true;
+            this.Delete_Book.Click += new System.EventHandler(this.Delete_Book_Click);
             // 
-            // textBox8
+            // richTextBox1
             // 
-            this.textBox8.Location = new System.Drawing.Point(172, 385);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(222, 22);
-            this.textBox8.TabIndex = 19;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(281, 435);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 43);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Cập nhật thông tin";
-            this.button3.UseVisualStyleBackColor = true;
+            this.richTextBox1.Location = new System.Drawing.Point(172, 393);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(84, 33);
+            this.richTextBox1.TabIndex = 21;
+            this.richTextBox1.Text = "";
             // 
             // LibrarianActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 495);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(504, 447);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.Delete_Book);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.Update);
+            this.Controls.Add(this.Author);
+            this.Controls.Add(this.Publisher);
+            this.Controls.Add(this.Year);
+            this.Controls.Add(this.Title);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Search_Book);
+            this.Controls.Add(this.Search_ISBN);
+            this.Controls.Add(this.Delete);
             this.Controls.Add(this.Addbook);
             this.Name = "LibrarianActivity";
             this.Text = "LibrarianActivity";
@@ -251,24 +229,21 @@
         #endregion
 
         private System.Windows.Forms.Button Addbook;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.RichTextBox Search_ISBN;
+        private System.Windows.Forms.Button Search_Book;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox Title;
+        private System.Windows.Forms.TextBox Year;
+        private System.Windows.Forms.TextBox Publisher;
+        private System.Windows.Forms.TextBox Author;
+        private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button Delete_Book;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

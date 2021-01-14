@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Xml;
 namespace Project
 {
+    [Serializable()]
     public class Account
     {
         public List<string> no_borrowed_books;

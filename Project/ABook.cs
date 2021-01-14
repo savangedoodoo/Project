@@ -28,7 +28,7 @@ namespace Project
             this.BookID = BookID;
             this.Status = Status;
             this.Availability = Availability;
-            this.BookType = BookFactory.getBookType(BookType.ISBN, BookType.Title, BookType.Author, BookType.Publisher);
+            this.BookType = BookFactory.getBookType(BookType.ISBN, BookType.Title, BookType.Author, BookType.Publisher,BookType.Year);
         }
         public ABook(SerializationInfo info, StreamingContext ctxt)
         {

@@ -53,12 +53,13 @@ namespace Project
         private ArrayList chapter = new ArrayList();
 
         public Book() {  }
-        public Book(string isbn, string title, string author, string publisher)
+        public Book(string isbn, string title, string author, string publisher,int year)
         {
             this.isbn = isbn;
             this.title = title;
             this.author = author;
             this.publisher = publisher;
+            this.year = year;
         }
 
         #endregion

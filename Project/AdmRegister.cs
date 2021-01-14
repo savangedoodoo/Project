@@ -23,16 +23,15 @@ namespace Project
             string Check = "";
             if (database.CheckAccount(Account.Text)) Check += "Account đã tồn tại!\n";
             if (!User.CheckPassword(Password.Text)) Check += "Password phải có ít nhất 8 kí tự, có số và có kí tự viết hoa!\n";
-            if (!User.CheckDateofBirth(DateofBirth.Value)) Check += "Không có sinh viên nào sinh sau 2003,làm ơn nhập lại!\n";
-            if (!User.CheckPhoneNumber(PhoneNum.Text)) Check += "Số điện thoại không phù hợp!\n";
-            if (!Librarian.check_Email(Email.Text)) Check += "Email không phù hợp!";
+            Facade check = new Facade(Email.Text, PhoneNum.Text, DateofBirth.Value);
+            Check += check.Check();
             if (Manegement_Code.Text != "HungNguyenTai") Check += "Sai Mã Quản lý!";
             if (Check != "")
             {
                 MessageBox.Show(Check);
                 return;
             }
-            database.librarians.Add(new Librarian(Account.Text,HoVaTen.Text,Password.Text,Home_Address.Text,Email.Text,PhoneNum.Text));
+            database.librarians.Add(new Librarian(Account.Text,HoVaTen.Text,Password.Text,Home_Address.Text,Email.Text,PhoneNum.Text,ID.Text,DateofBirth.Value));
             database.saveDatabase();
             this.Close();
             // Lưu các thông tin vào xml file 

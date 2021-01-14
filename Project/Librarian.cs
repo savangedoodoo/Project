@@ -7,23 +7,22 @@ using System.Threading.Tasks;
 
 namespace Project
 {
-    public class Librarian
+    public class Librarian:Person
     {
         public string Account;
         public string Password;
-        public string Name;
         public string Home_Address;
-        public string Email_Address;
-        public string Phone_number;
         public Librarian() { }
-        public Librarian(string Account,string Name,string Password,string Home,string Email,string Phone)
+        public Librarian(string Account,string Name,string Password,string Home,string Email,string Phone,string ID,DateTime DateofBirth)
         {
             this.Account = Account;
-            this.Name = Name;
+            this._Username = Name;
             this.Password = Password;
             this.Home_Address = Home;
-            this.Email_Address = Email;
-            this.Phone_number = Phone;
+            this._Email = Email;
+            this._PhoneNum = Phone;
+            this._ID = ID;
+            this.DateofBirth = DateofBirth;
         }
         public void check_if_any()
         {

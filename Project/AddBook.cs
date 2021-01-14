@@ -16,10 +16,9 @@ namespace Project
         {
             InitializeComponent();
         }
-        Librarian librarian = new Librarian();
         private void Add_btn_Click(object sender, EventArgs e)
         {
-            Book b = BookFactory.getBookType(ISBN_txt.Text, Title_txt.Text, Author_txt.Text, Publisher_txt.Text);
+            Book b = BookFactory.getBookType(ISBN_txt.Text, Title_txt.Text, Author_txt.Text, Publisher_txt.Text,Convert.ToInt32(Year_txt.Text));
             status s = status.good;
             if (radioButton2.Checked == true) s = status.medium;
             else if (radioButton3.Checked == true) s = status.bad;

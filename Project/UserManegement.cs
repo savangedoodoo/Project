@@ -18,6 +18,9 @@ namespace Project
         }
         Database database = Database.GetDatabase();
         User user;
+        Memento savedState;
+
+        Memento.Originator originator = new Memento.Originator();
         private void Add_User_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -31,8 +34,10 @@ namespace Project
             if(database.users.Any(item=>item.ID==Search_ID.Text))
             {
                 user = database.users.Find(item => item.ID == Search_ID.Text);
+                originator.Set(user);
                 Name.Text = user.Username;
                 ID.Text = user.ID;
+                Search_ID.Text = ID.Text;
                 Email.Text = user.Email;
                 DateofBirth.Value = user.DateofBirth;
                 PhoneNum.Text = user.PhoneNum;
@@ -43,6 +48,7 @@ namespace Project
 
         private void Update_Click(object sender, EventArgs e)
         {
+            savedState = originator.SaveToMemento();
             user.Username = Name.Text;
             user.ID = ID.Text;
             user.Email = Email.Text;
@@ -53,6 +59,18 @@ namespace Project
         private void Delete_Click(object sender, EventArgs e)
         {
             database.users.Remove(user);
+        }
+
+        private void Undo_Click(object sender, EventArgs e)
+        {
+            originator.RestoreFromMemento(savedState);
+            Name.Text = user.Username;
+            ID.Text = user.ID;
+            Search_ID.Text = ID.Text;
+            Email.Text = user.Email;
+            DateofBirth.Value = user.DateofBirth;
+            PhoneNum.Text = user.PhoneNum;
+
         }
     }
 }
