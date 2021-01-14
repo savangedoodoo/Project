@@ -9,35 +9,45 @@ namespace Project
     [Serializable()]
     public abstract class Person
     {
-        protected string _Username;
-        protected string _ID;
-        protected string _Email;
-        protected DateTime _DateofBirth;
-        protected string _PhoneNum;
+        #region Public interface
         public string Username
         {
-            get { return _Username; }
-            set { _Username = value; }
+            get { return m_str_username; }
+            set { m_str_username = value; }
         }
         public string ID
         {
-            get { return _ID; }
-            set { _ID = value; }
+            get { return m_str_id; }
+            set { m_str_id = value; }
         }
         public string Email
         {
-            get { return _Email; }
-            set { _Email = value; }
+            get { return m_str_email; }
+            set { m_str_email = value; }
         }
         public DateTime DateofBirth
         {
-            get { return _DateofBirth; }
-            set { _DateofBirth = value; }
+            get { return m_str_date_of_birth; }
+            set { m_str_date_of_birth = value; }
         }
         public string PhoneNum
         {
-            get { return _PhoneNum; }
-            set { _PhoneNum = value; }
+            get { return m_str_phone_num; }
+            set { m_str_phone_num = value; }
+
         }
+        #endregion
+        #region Data Structure
+        #endregion
+        #region Members
+        protected string m_str_username;
+        protected string m_str_id;
+        protected string m_str_email;
+        protected DateTime m_str_date_of_birth;
+        protected string m_str_phone_num;
+        #endregion
+        #region Private Methods
+        #endregion
+
     }
 }

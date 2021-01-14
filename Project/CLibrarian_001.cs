@@ -7,23 +7,22 @@ using System.Threading.Tasks;
 
 namespace Project
 {
-    public class Librarian:Person
+    public class CLibrarian_001:Person
     {
-        public string Account;
-        public string Password;
-        public string Home_Address;
-        public Librarian() { }
-        public Librarian(string Account,string Name,string Password,string Home,string Email,string Phone,string ID,DateTime DateofBirth)
+        #region Public interface
+        public CLibrarian_001() { }
+        public CLibrarian_001(string m_string_account, string Name, string Password, string Home, string Email, string Phone, string ID, DateTime DateofBirth)
         {
-            this.Account = Account;
-            this._Username = Name;
-            this.Password = Password;
-            this.Home_Address = Home;
-            this._Email = Email;
-            this._PhoneNum = Phone;
-            this._ID = ID;
+            this.m_str_account = Account;
+            this.m_str_username = Name;
+            this.m_str_password = Password;
+            this.m_str_home_address = Home;
+            this.m_str_email = Email;
+            this.m_str_phone_num = Phone;
+            this.m_str_id = ID;
             this.DateofBirth = DateofBirth;
         }
+
         public void check_if_any()
         {
 
@@ -39,7 +38,7 @@ namespace Project
         public static void remove_abook(string BookID)
         {
             Database database = Database.GetDatabase();
-            if (database.listBook.Any(item =>item.BookID==BookID))
+            if (database.listBook.Any(item => item.BookID == BookID))
             {
                 //Dùng cách này mới trỏ tới đúng phần tử cần remove
                 database.listBook.Remove(database.listBook.Find(item => item.BookID == BookID));
@@ -51,6 +50,16 @@ namespace Project
             Regex re2 = new Regex(regex2);
             return re2.IsMatch(email);
         }
+        #endregion
+        #region Data Structure
+        #endregion
+        #region Members
+        public string m_str_account;
+        public string m_str_password;
+        public string m_str_home_address;
+        #endregion
+        #region Private Methods
+        #endregion
 
     }
 }

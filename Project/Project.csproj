@@ -74,7 +74,7 @@
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Facade.cs" />
-    <Compile Include="Librarian.cs" />
+    <Compile Include="CLibrarian_001.cs" />
     <Compile Include="LibrarianActivity.cs">
       <SubType>Form</SubType>
     </Compile>

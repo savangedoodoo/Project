@@ -27,7 +27,7 @@ namespace Project
             status s = status.good;
             if (radioButton2.Checked == true) s = status.medium;
             else if (radioButton3.Checked == true) s = status.bad;
-            Librarian.add_abook(BookID_txt.Text, s, true, b);
+            CLibrarian_001.add_abook(BookID_txt.Text, s, true, b);
         }
 
         private void Exit_btn_Click(object sender, EventArgs e)

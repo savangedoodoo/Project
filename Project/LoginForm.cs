@@ -19,7 +19,7 @@ namespace Project
             InitializeComponent();
         }
         Database database = Database.GetDatabase();
-        public static Librarian user;
+        public static CLibrarian_001 user;
         private void login(object sender, EventArgs e)
         {
             string username = UserID.Text;
