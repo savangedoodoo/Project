@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 namespace Project
 {
     [Serializable]
-    public class User:Person
+    public class User:CPerson_002
     {
         public User()
         {
