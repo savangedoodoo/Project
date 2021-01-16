@@ -31,7 +31,7 @@ namespace Project
                 MessageBox.Show(Check);
                 return;
             }
-            database.librarians.Add(new Librarian(Account.Text,HoVaTen.Text,Password.Text,Home_Address.Text,Email.Text,PhoneNum.Text,ID.Text,DateofBirth.Value));
+            database.librarians.Add(new CLibrarian_001(Account.Text,HoVaTen.Text,Password.Text,Home_Address.Text,Email.Text,PhoneNum.Text,ID.Text,DateofBirth.Value));
             database.saveDatabase();
             this.Close();
             // Lưu các thông tin vào xml file 

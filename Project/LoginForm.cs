@@ -19,14 +19,14 @@ namespace Project
             InitializeComponent();
         }
         Database database = Database.GetDatabase();
-        public static Librarian user;
+        public static CLibrarian_001 user;
         private void login(object sender, EventArgs e)
         {
             string username = UserID.Text;
             string password = Password.Text;
-            if (database.librarians.Any(item => item.Account == username && item.Password == password))
+            if (database.librarians.Any(item => item.m_str_account == username && item.m_str_password == password))
             {
-                LoginForm.user = database.librarians.Find(item => item.Account == username);
+                LoginForm.user = database.librarians.Find(item => item.m_str_account == username);
                 open_start_page();
             }
         }

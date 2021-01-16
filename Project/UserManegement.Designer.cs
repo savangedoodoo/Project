@@ -35,8 +35,8 @@
             this.ID = new System.Windows.Forms.TextBox();
             this.PhoneNum = new System.Windows.Forms.TextBox();
             this.Email = new System.Windows.Forms.TextBox();
-            this.Name = new System.Windows.Forms.TextBox();
-            this.Update = new System.Windows.Forms.Button();
+            this.Name_txt = new System.Windows.Forms.TextBox();
+            this.Update_user_info = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -112,23 +112,23 @@
             this.Email.Size = new System.Drawing.Size(205, 22);
             this.Email.TabIndex = 34;
             // 
-            // Name
+            // Name_txt
             // 
-            this.Name.Location = new System.Drawing.Point(209, 107);
-            this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(205, 22);
-            this.Name.TabIndex = 32;
+            this.Name_txt.Location = new System.Drawing.Point(209, 107);
+            this.Name_txt.Name = "Name_txt";
+            this.Name_txt.Size = new System.Drawing.Size(205, 22);
+            this.Name_txt.TabIndex = 32;
             // 
-            // Update
+            // Update_user_info
             // 
-            this.Update.Enabled = false;
-            this.Update.Location = new System.Drawing.Point(261, 330);
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(153, 43);
-            this.Update.TabIndex = 31;
-            this.Update.Text = "Cập nhật thông tin";
-            this.Update.UseVisualStyleBackColor = true;
-            this.Update.Click += new System.EventHandler(this.Update_Click);
+            this.Update_user_info.Enabled = false;
+            this.Update_user_info.Location = new System.Drawing.Point(261, 330);
+            this.Update_user_info.Name = "Update_user_info";
+            this.Update_user_info.Size = new System.Drawing.Size(153, 43);
+            this.Update_user_info.TabIndex = 31;
+            this.Update_user_info.Text = "Cập nhật thông tin";
+            this.Update_user_info.UseVisualStyleBackColor = true;
+            this.Update_user_info.Click += new System.EventHandler(this.Update_Click);
             // 
             // Delete
             // 
@@ -243,8 +243,8 @@
             this.Controls.Add(this.ID);
             this.Controls.Add(this.PhoneNum);
             this.Controls.Add(this.Email);
-            this.Controls.Add(this.Name);
-            this.Controls.Add(this.Update);
+            this.Controls.Add(this.Name_txt);
+            this.Controls.Add(this.Update_user_info);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -255,6 +255,7 @@
             this.Controls.Add(this.Search_ID);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.Add_User);
+            this.Name = "UserManegement";
             this.Text = "UserManegement";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -270,8 +271,8 @@
         private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.TextBox PhoneNum;
         private System.Windows.Forms.TextBox Email;
-        private System.Windows.Forms.TextBox Name;
-        private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.TextBox Name_txt;
+        private System.Windows.Forms.Button Update_user_info;
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,9 +11,9 @@ namespace Project
     {
         #region Public interface
         public CLibrarian_001() { }
-        public CLibrarian_001(string m_string_account, string Name,string Password,string Home,string Email,string Phone,string ID,DateTime DateofBirth)
+        public CLibrarian_001(string m_string_account, string Name, string Password, string Home, string Email, string Phone, string ID, DateTime DateofBirth)
         {
-            this.m_str_account = Account;
+            this.m_str_account = m_string_account;
             this.m_str_username = Name;
             this.m_str_password = Password;
             this.m_str_home_address = Home;
@@ -22,7 +22,6 @@ namespace Project
             this.m_str_id = ID;
             this.DateofBirth = DateofBirth;
         }
-            
         public void check_if_any()
         {
 
@@ -38,7 +37,7 @@ namespace Project
         public static void remove_abook(string BookID)
         {
             Database database = Database.GetDatabase();
-            if (database.listBook.Any(item =>item.BookID==BookID))
+            if (database.listBook.Any(item => item.BookID == BookID))
             {
                 //Dùng cách này mới trỏ tới đúng phần tử cần remove
                 database.listBook.Remove(database.listBook.Find(item => item.BookID == BookID));

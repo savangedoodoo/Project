@@ -132,4 +132,64 @@
       <Year>0</Year>
     </BookType>
   </ABook>
+  <ABook>
+    <BookID>dsdsd</BookID>
+    <Status>medium</Status>
+    <Availability>true</Availability>
+    <BookType>
+      <Title>sd</Title>
+      <Publisher />
+      <Author />
+      <ISBN />
+      <Year>2000</Year>
+    </BookType>
+  </ABook>
+  <ABook>
+    <BookID>dsdsd</BookID>
+    <Status>medium</Status>
+    <Availability>true</Availability>
+    <BookType>
+      <Title>sd</Title>
+      <Publisher />
+      <Author />
+      <ISBN />
+      <Year>2000</Year>
+    </BookType>
+  </ABook>
+  <ABook>
+    <BookID>dsdsd</BookID>
+    <Status>medium</Status>
+    <Availability>true</Availability>
+    <BookType>
+      <Title>sd</Title>
+      <Publisher />
+      <Author />
+      <ISBN />
+      <Year>2000</Year>
+    </BookType>
+  </ABook>
+  <ABook>
+    <BookID>dsdsd</BookID>
+    <Status>medium</Status>
+    <Availability>true</Availability>
+    <BookType>
+      <Title>sd</Title>
+      <Publisher />
+      <Author />
+      <ISBN />
+      <Year>2000</Year>
+    </BookType>
+  </ABook>
+  <ABook>
+    <BookID>dsdsd</BookID>
+    <Status>medium</Status>
+    <Availability>true</Availability>
+    <BookType>
+      <Title>sd</Title>
+      <Publisher />
+      <Author />
+      <ISBN />
+      <Year>2000</Year>
+    </BookType>
+  </ABook>
 </ArrayOfABook>
